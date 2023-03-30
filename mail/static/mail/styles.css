@@ -1,0 +1,173 @@
+textarea {
+    min-height: 180px;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to left bottom, #ffe4e1, #e5c4cc, #c5a7bb, #9d8dad, #6d779c);
+}
+
+.form-control {
+    background-color: #ffe4e1 !important;
+}
+
+.mail--read {
+    background: transparent;
+    border: 0.02rem dashed black;
+}
+
+.mail--unread {
+    background: #c5a7bb;
+    border: 0.05rem solid black;
+}
+
+.mail__value {
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-template-areas: "one two three four";
+    grid-gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.mail__from {
+    grid-area: one;
+}
+
+.mail__subject {
+    grid-area: two;
+}
+
+.mail__time {
+    grid-area: three;
+    text-align: end;
+}
+
+.icon {
+    grid-area: four;
+}
+
+@media only screen and (max-width: 991px) {
+    .mail__value {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        grid-template-areas: "one two two four";
+        grid-gap: 20px;
+    }
+
+    .mail__time {
+        display: none;
+    }
+
+    .mail__subject {
+        text-align: end;
+    }
+
+    .nav-grid {
+        justify-items: center;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .mail__value {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "one one four""two two four";
+        grid-gap: 20px;
+        justify-items: center;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    /* todo make clickable menu */
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.menu {
+    text-align: end;
+}
+
+#emails-view>a {
+    color: black;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    cursor: pointer;
+}
+
+#emails-view>a:hover {
+    text-decoration: none;
+    color: black;
+    top: -0.5rem;
+}
+
+a:hover>div {
+    box-shadow: 5px 5px #c58309;
+}
+
+.details-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(4, auto) 1fr;
+}
+
+.details-grid>hr {
+    color: black;
+    background-color: red;
+    background: blue;
+}
+
+.icon {
+    border: none;
+    color: rgb(114, 182, 204);
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.icon:hover {
+    color: blue;
+}
+
+.reply-button {
+    position: fixed;
+    bottom: 1.5rem;
+    border: 1.5px solid maroon;
+    color: maroon;
+}
+
+.reply-button:hover {
+    color: white;
+    background: maroon;
+}
+
+html {
+    min-width: 370px;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: stretch;
+}
+
+.child {
+    width: 50vw;
+    min-width: 300px;
+    justify-self: center;
+    text-align: center;
+    border: 2px solid palevioletred;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.658);
+}
